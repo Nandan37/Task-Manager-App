@@ -1,0 +1,30 @@
+.task-bar {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.task-bar.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+  border-left: 4px solid #198754; /* green for completed */
+}
+
+.task-bar:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h6 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+
+@if (tasks.length > 0) {
+  <div class="container my-4 d-flex mt-4 justify-content-center">
+    <div class="p-4 rounded task-panel">
+      <h5 class="mb-4 text-center">Your Tasks</h5>
+      <div class="text-end mb-3">
+      <button type="button" class="btn btn-danger" (click)="storageDelete()"> 
+       Delete All Tasks <i class="bi bi-trash"></i>
+      </button>
+          </div>
+
+
+      <div class="task-list d-flex flex-column gap-3" >
+        @for (task of tasks; track task.id) {
+          <div class="task-item bg-white p-3 rounded shadow-sm" 
+          [ngClass]="{
+        'border-start border-4 border-danger': task.status === 'Not Started',
+        'border-start border-4 border-warning': task.status === 'In Progress',
+        'border-start border-4 border-success': task.status === 'Completed'
+      }"
+          >
+            <app-task-card
+              [task]="task"
+              (toggleComplete)="onToggle(task.id)"
+              (delete)="onDelete(task.id)"
+               (statusChange)="onStatusChange(task.id, $event)">
+            </app-task-card>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="container my-4 d-flex mt-4 justify-content-center">
+    <div class="p-4 rounded task-panel">
+      <h5 class="mb-4 text-center">No Tasks Found</h5>
+    </div>
+  </div>
+}

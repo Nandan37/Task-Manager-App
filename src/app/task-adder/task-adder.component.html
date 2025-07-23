@@ -1,0 +1,85 @@
+<div class="background">
+  <div class="d-flex">
+  <button (click)="openAddTaskDialog()" class="btn btn-primary btn-lg rounded mt-5 fab">
+    <i class="bi" [ngClass]="showAddForm ? 'bi-x-lg' : 'bi-plus-lg'"></i>
+  </button>
+</div>
+
+
+
+
+  
+  
+  <div
+    class="d-flex flex-wrap gap-4 justify-content-center py-3 mt-4 rounded glass-form"
+    style="max-width: 1000px; margin: 0 auto;"
+  >
+    <div>
+      <label class="form-label">Priority</label>
+      <select class="form-select" [(ngModel)]="filters.priority" (change)="applyFilters()" name="filterPriority">
+        <option value="">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="form-label">From</label>
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="filters.fromDate"
+        (change)="applyFilters()"
+        name="filterFrom"
+      />
+    </div>
+
+    <div>
+      <label class="form-label">To</label>
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="filters.toDate"
+        (change)="applyFilters()"
+        name="filterTo"
+      />
+    </div>
+
+    <div>
+      <label class="form-label">Sort By</label>
+      <select
+        class="form-select"
+        [(ngModel)]="filters.sortBy"
+        (change)="applyFilters()"
+        name="filterSort"
+      >
+        <option value="">None</option>
+        <option value="dueDate">Due Date</option>
+        <option value="title">Title (A-Z)</option>
+      </select>
+    </div>
+
+    <div class="align-self-end">
+      <button class="btn btn-danger" (click)="resetFilters()">Reset</button>
+    </div>
+    <div class="search-bar d-flex align-items-end gap-3 p-3  rounded glass-form" style="width: fit-content;">
+  <input
+    type="text"
+    placeholder="Search tasks by title..."
+    [(ngModel)]="searchQuery"
+    (input)="applyFilters()" />
+    <i class="bi bi-search"></i>
+</div>
+  </div>
+
+  
+  <app-task-list
+    [tasks]="filteredTasks"
+    (toggle)="toggleComplete($event)"
+    (delete)="deleteTask($event)"
+    
+  
+  ></app-task-list>
+</div>
+

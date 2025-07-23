@@ -1,0 +1,72 @@
+.background {
+  
+  width: 100%;
+  min-height: 93.3vh;              
+  background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcNDQcIBwcHBwcHBw0HCAcHBxsICQcKFREWIhURHRMYJDQgJBslGx8TLTEiKykrLi4uFx8zOD8sNyg+OisBCgoKDQ0NDg0NDi0lHiU3LTgrNzctNysvODc3LTcrNzc0NTc3Ny8rKy0uODgtKysrKysrKys3KzgtKzcuKzctK//AABEIAKMBNgMBIgACEQEDEQH/xAAaAAEBAQADAQAAAAAAAAAAAAAAAQUDBAYC/8QAHRABAQEBAQEBAAMAAAAAAAAAAAECAwQREgUGUf/EABgBAQEBAQEAAAAAAAAAAAAAAAIGAQMF/8QAHxEBAQACAAcBAAAAAAAAAAAAAAECAwQRITJBUXEF/9oADAMBAAIRAxEAPwD2vTetXW96ut6v61rV+218iVLPKtEVCgUQCGiAUCiAUClQCg1ACgVAQoFAQoNEWocClQCg1ACgUQKUCiAUGoAUCoCFBoioUCiAUGiCHArm83q9HG3fn7dOOtZ/NuNfPsVwDSx3bMZyx2WT61kBMxV1AQoNAQoFAQoFAQoNEVCgURUKDRAKBRApwagIUCiKhQKAhDQEKBRFQoFEVCg0QCgVAQoNEVCgUQDg0QGi1kVEzFfRAKBRAIaIBQKVAKBUAKDUBCgURUODRAKBUAKDUAKBRAKBUAKDUBCgUBCg0RUKBRAKBUBDGgIUCgDR5tUETMWFAQoFAQoFAQoNEVCgURUKBRAKDUBDgURUKDRFQoFAQoNEVCgURUKBRFQoNEAoFQEIaIqHApUAoNQAoFAGi1UBMxX0QCg0QCgUQCgVAqFBoCFAoiocGiFCgVAKUGoAUCoAUCoAUCoCFBoioUCiKhQaIFOBUKIUGiKhQKAFAqKg0WqiomYsKAhQKAhQKIqENEA4FEAoNQEKBRFQoNEWoUCgIUCiKhQaIBQKIBQagBQKgIY0RahQKVAKBRAIaIqFAoAQtQBMRX0QCg0QCgVAQoFAQ4NEqoUGiAUCoAUCoAQ1ACgVAqFApQQoNEVCgURUODRApQKgIQ0BCCgBQKgIUGgBC1QRMRX0BCgURUKDRAOBRAKDUoIUCiKhQaIqFAoioUCiKhQaIBQKIBQalBCgUBDgURahQaIBQKgBQaIqFAogFAqKgQtZATEWFQoHAqAhQKAhQaIqFAogFBqAFAqAENQAoFQEKBQEpQaIqHAogFBogFAqAhDRFQoFACgVAQoNEqoUCggQtZFRMRX0qAcGiAUCiAUGoCFAoi1CgUQCg0RUKBRFQoNEAoFEKFAqAhwaAhQKIqFBogFAqAFAogFBohQoFQEKDQAhb38lzxjv6efPP5xjrZnP378jrUE3n3ZLLZ3ZIAyOVQAgqJQODRAKBUAKDUECClAKBUAKDUAKBUSgUGiAUClQCg1BAwoIEFACg1ACgVEqhBUQCg1vf1LxeXv19OfVxz2zjjLmatkl+z/AHPO9Vn+Nw+nPg8Ms9Ut6+J7f/9k=");  
+   background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;                  
+  box-sizing: border-box;
+}
+
+input {
+  text-transform: capitalize;
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+
+}
+
+
+
+
+
+.glass-form {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.d-flex.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.required-star {
+  color: red;
+  font-weight: bold;
+}
+
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 0rem;
+  padding-top: 0rem;
+}
