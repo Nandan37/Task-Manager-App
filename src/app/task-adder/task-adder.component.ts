@@ -177,4 +177,25 @@ export class TaskAdderComponent {
     });
   }
   
+  updateTask(updated: any) {
+    console.log('Received task update:', updated);
+
+    if (updated?.id == null) {
+    console.warn('Updated task has no id:', updated);
+    return;
+  }
+
+  const idx = this.tasks.findIndex(t => t.id === updated.id);
+  if (idx === -1) {
+    console.warn('Task not found, id:', updated.id);
+    return; 
+  }
+
+  
+  this.tasks = this.tasks.map((t, i) => i === idx ? { ...t, ...updated } : t);
+
+  
+  this.filteredTasks = [...this.tasks];
+  this.SaveToLocal();
+  }
 }

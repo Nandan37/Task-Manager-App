@@ -1,9 +1,9 @@
 <div class="task-bar d-flex align-items-center justify-content-between p-3 rounded shadow-sm mb-3" [class.completed]="task.completed">
   
   
-  <!-- <div class="form-check me-3">
-    <input type="checkbox" class="form-check-input" [checked]="task.completed" (change)="onToggle()" />
-  </div> -->
+  <button class="btn btn-sm btn-outline-black border-0 me-2" (click)="updateTaskDialog()">
+     <i class="bi bi-vector-pen"></i>
+  </button>
 
   
   <div class="flex-grow-1">

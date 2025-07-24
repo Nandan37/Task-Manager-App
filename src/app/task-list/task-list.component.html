@@ -23,7 +23,9 @@
               [task]="task"
               (toggleComplete)="onToggle(task.id)"
               (delete)="onDelete(task.id)"
-               (statusChange)="onStatusChange(task.id, $event)">
+               (statusChange)="onStatusChange(task.id, $event)"
+                (updateTask)="onUpdateTask($event)">
+              
             </app-task-card>
           </div>
         }

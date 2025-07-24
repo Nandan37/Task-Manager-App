@@ -17,6 +17,7 @@ export class TaskListComponent {
   @Input() tasks: any[] = [];
   @Output() toggle = new EventEmitter<number>();
   @Output() delete = new EventEmitter<number>();
+  @Output() updateTask = new EventEmitter<any>();
 
 
   
@@ -64,5 +65,18 @@ export class TaskListComponent {
     console.log("button clicked");
     localStorage.clear();
 
+  }
+  onUpdateTask(updatedTask: any) {
+    const existingTaskIndex = this.tasks.findIndex(t => t.id === updatedTask.id);
+
+  if (existingTaskIndex !== -1) {
+    
+    this.tasks[existingTaskIndex] = updatedTask;
+  } else {
+    
+    this.tasks.push(updatedTask);
+  }
+    this.SaveToLocal()
+    this.updateTask.emit(updatedTask);
   }
 }
