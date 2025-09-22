@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '.',
+  basePath: '/task-manager',
   supportedLocales: {
   "en-US": ""
 },
